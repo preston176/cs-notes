@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+class staff
+{
+private:
+    string name;
+    int salary;
+    int units;
+    float tax;
+public:
+    void getdetails();
+    void calcsalary();
+    void output();
+};
+class lecturer
+{
+private:
+    string name;
+    int salary;
+    int units;
+    float tax;
+public:
+    void getdetails();
+    void calcsalary();
+    void output();
+};
+void staff::getdetails() {
+    cout<<"Enter your name:";
+    cin>>name;
+    cout<<"Enter your salary:";
+    cin>>salary;
+    cout<<"Enter your units:";
+    cin>>units;
+}
+void staff::calcsalary() {
+    tax = 0.30 * salary;
+}
+void staff::output() {
+    cout<<"Your name is: "<<name;
+    cout<<"Your salary is :"<<salary;
+    cout<<"Your tax is:"<<tax;
+}void lecturer::getdetails() {
+    cout<<"Enter your name:";
+    cin>>name;
+    cout<<"Enter your salary:";
+    cin>>salary;
+    cout<<"Enter your units:";
+    cin>>units;
+}
+void lecturer::calcsalary() {
+    tax = 0.30 * salary;
+}
+void lecturer::output() {
+    cout << "Your name is: " << name;
+    cout << "Your salary is :" << salary;
+    cout << "Your tax is:" << tax;
+}
+int main(){
+    lecturer a;
+    staff b;
+    cout<<"Are you a lecturer?"<<endl;
+   a.getdetails();
+    a.calcsalary();
+    a.output();
+    cout<<"Are you a staff member?"<<endl;
+        b.getdetails();
+        b.calcsalary();
+        b.output();
+return 0;
+}
